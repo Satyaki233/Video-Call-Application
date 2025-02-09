@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat APP</title>
+    <script>
+        const ROOM_ID = "<%= roomId %>"
+        
+    </script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/js/room.js" defer></script>
+</head>
+<link rel="stylesheet" href="/css/room.css">
+<body>
+    <h1>Welcome <%= userName %> </h1>
+    <p>Room link : <%= roomId %> </p>
+    <div id="video-grid"></div>
+</body>
+</html>

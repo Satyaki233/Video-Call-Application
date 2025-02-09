@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+</head>
+<link rel="stylesheet" href="/css/index.css">
+<body>
+    <div class="container">
+        <h1>Welcome to Chat Rooms</h1>
+        
+        <div class="form-group">
+            <label for="username">Enter your name:</label><br>
+            <input type="text" id="username" name="username" placeholder="Your name">
+        </div>
+
+        <div class="buttons">
+            <button onclick="handleCreate(event)" id="createBtn" disabled>Create Chat Room</button>
+            <button onclick="handleJoin(event)" id="joinBtn" disabled>Join Chat Room</button>
+        </div>
+    </div>
+
+    <!-- Modal for room link -->
+    <div id="roomLinkModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Join Chat Room</h2>
+            <div class="form-group">
+                <label for="roomId">Enter Room ID:</label><br>
+                <input type="text" id="roomId" name="roomId" placeholder="Enter room ID">
+            </div>
+            <button onclick="joinRoom(event)" id="joinRoomBtn">Join</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="/js/index.js" defer></script>
+</body>
+</html>
